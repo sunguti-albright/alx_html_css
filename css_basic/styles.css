@@ -1,0 +1,61 @@
+/* 1. Flexbox positioning */
+
+/* Body contains header, main, footer stacked */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Main contains article + aside side by side */
+  main {
+    display: flex;
+    flex-direction: row;
+    flex: auto; /* let it expand */
+  }
+  
+  /* Article: 2/3 width */
+  article {
+    flex: 2;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  /* Aside: 1/3 width */
+  aside {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #fafafa;
+  }
+  
+  /* Some spacing for children of main */
+  main > * {
+    box-sizing: border-box;
+  }
+  
+  /* 3. Some more styling (colors, borders, etc.) */
+  header {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+  }
+  
+  header ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  header li.logo {
+    font-size: 32px;
+  }
+  
+  footer {
+    text-align: center;
+    background-color: #eee;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
